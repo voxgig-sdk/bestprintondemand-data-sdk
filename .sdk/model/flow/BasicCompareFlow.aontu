@@ -1,0 +1,28 @@
+# BasicCompareFlow
+
+main: kit: flow: BasicCompareFlow:
+{
+  entity: "compare",
+  kind: "basic",
+  name: "BasicCompareFlow",
+  step: [
+    {
+      i: {
+        ref: "compare_ref01",
+        srcdatavar: "compare_ref01_data",
+        suffix: "_dt0"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-compare_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicCompareFlow"
+}

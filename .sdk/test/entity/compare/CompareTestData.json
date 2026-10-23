@@ -1,0 +1,32 @@
+{
+  "existing": {
+    "compare": {
+      "COMPARE00": {
+        "summary": "sa",
+        "id": "COMPARE00"
+      },
+      "COMPARE01": {
+        "summary": "s14",
+        "id": "COMPARE01"
+      },
+      "COMPARE02": {
+        "summary": "s1e",
+        "id": "COMPARE02"
+      }
+    }
+  },
+  "new": {
+    "compare": {
+      "compare_ref01": {
+        "summary": "s28"
+      }
+    }
+  },
+  "requests": {
+    "GET /compare": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

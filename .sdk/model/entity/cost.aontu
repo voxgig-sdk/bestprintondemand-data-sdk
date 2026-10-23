@@ -1,0 +1,150 @@
+# Entity: cost
+
+main: kit: entity: cost: {
+
+  alias: field: {}
+
+  fields: {
+    summary: {
+      h: "Summary"
+      n: "summary"
+      r: true
+      sh: "The same answer as plain text, ready to quote, with the figures, the page each comes from and the basis they are stated on."
+      t: "`$STRING`"
+    }
+  }
+
+  name: "cost"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /products/{product}/costs"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "unisex-tee"
+                k: "param"
+                n: "product_id"
+                or: "product"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+            query: [
+              {
+                k: "query"
+                n: "buyer_pays_shipping"
+                or: "buyer_pays_shipping"
+                r: false
+                t: "`$BOOLEAN`"
+              }
+              {
+                ex: "etsy"
+                k: "query"
+                n: "channel"
+                or: "channel"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: 25
+                k: "query"
+                n: "sell_price"
+                or: "sell_price"
+                r: false
+                t: "`$NUMBER`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/products/{product}/costs"
+          q: {
+            exist: [
+              "product_id"
+            ]
+          }
+          r: {
+            param: {
+              product: "product_id"
+            }
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "products"
+            }
+            {
+              var: "product_id"
+            }
+            {
+              lit: "costs"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "GET /products"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                ex: 3
+                k: "query"
+                n: "limit"
+                or: "limit"
+                r: false
+                t: "`$INTEGER`"
+              }
+              {
+                ex: "hoodie"
+                k: "query"
+                n: "query"
+                or: "query"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/products"
+          q: {
+            exist: [
+              "query"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "products"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

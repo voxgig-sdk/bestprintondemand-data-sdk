@@ -1,0 +1,69 @@
+# Entity: price_change
+
+main: kit: entity: price_change: {
+
+  alias: field: {}
+
+  fields: {
+    summary: {
+      h: "Summary"
+      n: "summary"
+      r: true
+      sh: "The same answer as plain text, ready to quote, with the figures, the page each comes from and the basis they are stated on."
+      t: "`$STRING`"
+    }
+  }
+
+  name: "price_change"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /price-changes"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                k: "query"
+                n: "product"
+                or: "product"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: "printify"
+                k: "query"
+                n: "supplier"
+                or: "supplier"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/price-changes"
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "price-changes"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

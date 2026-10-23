@@ -1,0 +1,9 @@
+# BestprintondemandData SDK utility: prepare_body
+require_relative 'media'
+module BestprintondemandDataUtilities
+  PrepareBody = ->(ctx) {
+    return nil unless ctx.op.input == "data"
+    return BestprintondemandDataUtilities.raw_body(ctx.reqdata) if BestprintondemandDataUtilities.raw_request?(ctx.point)
+    ctx.utility.transform_request.call(ctx)
+  }
+end

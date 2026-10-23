@@ -1,0 +1,76 @@
+# Entity: compare
+
+main: kit: entity: compare: {
+
+  alias: field: {}
+
+  fields: {
+    summary: {
+      h: "Summary"
+      n: "summary"
+      r: true
+      sh: "The same answer as plain text, ready to quote, with the figures, the page each comes from and the basis they are stated on."
+      t: "`$STRING`"
+    }
+  }
+
+  name: "compare"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /compare"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                ex: "printful"
+                k: "query"
+                n: "supplier_a"
+                or: "supplier_a"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "printify"
+                k: "query"
+                n: "supplier_b"
+                or: "supplier_b"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/compare"
+          q: {
+            exist: [
+              "supplier_a"
+              "supplier_b"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          s: [
+            {
+              lit: "compare"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

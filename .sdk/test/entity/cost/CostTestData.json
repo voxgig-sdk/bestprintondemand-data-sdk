@@ -1,0 +1,40 @@
+{
+  "existing": {
+    "cost": {
+      "COST00": {
+        "summary": "sa",
+        "product_id": "PRODUCT01",
+        "id": "COST00"
+      },
+      "COST01": {
+        "summary": "s14",
+        "product_id": "PRODUCT01",
+        "id": "COST01"
+      },
+      "COST02": {
+        "summary": "s1e",
+        "product_id": "PRODUCT01",
+        "id": "COST02"
+      }
+    }
+  },
+  "new": {
+    "cost": {
+      "cost_ref01": {
+        "summary": "s28"
+      }
+    }
+  },
+  "requests": {
+    "GET /products/{product}/costs": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /products": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

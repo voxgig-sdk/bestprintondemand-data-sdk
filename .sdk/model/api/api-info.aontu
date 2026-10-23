@@ -1,0 +1,32 @@
+# API Information
+
+
+main: {
+  kit: {
+    info: {
+      auth: false
+      contact: {
+        email: "hello@bestprintondemand.co"
+        name: "BestPrintOnDemand"
+        url: "https://bestprintondemand.co/data#api"
+      }
+      description: "What it costs to print and ship print-on-demand products in the US at each supplier (Printful, Printify, Gelato and more): base price, first-item shipping and total, each with its source and date, the cheapest supplier like for like, profit at a sell price after a sales channel's fees, head-to-head supplier records, and the price changes hourly readings of Printful, Printify and Gelato attribute to each supplier. The same answers as the pages of BestPrintOnDemand and its MCP server. No key or account; read-only; open to any origin (CORS). The data is licensed CC BY 4.0: credit BestPrintOnDemand and link the page or source a figure came from."
+      license: {
+        identifier: "CC-BY-4.0"
+        name: "CC BY 4.0"
+      }
+      servers: [
+        {
+          description: "Production"
+          url: "https://bestprintondemand.co/api/v1"
+        }
+      ]
+      summary: "Live US print-on-demand costs by product and supplier: base price, shipping, total, profit and price changes."
+      termsOfService: "https://bestprintondemand.co/legal/terms"
+      title: "BestPrintOnDemand API"
+      version: "1.0.0"
+      website: "https://bestprintondemand.co/data#api"
+    }
+  }
+}
+

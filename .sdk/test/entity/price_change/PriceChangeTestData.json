@@ -1,0 +1,32 @@
+{
+  "existing": {
+    "price_change": {
+      "PRICE_CHANGE00": {
+        "summary": "sa",
+        "id": "PRICE_CHANGE00"
+      },
+      "PRICE_CHANGE01": {
+        "summary": "s14",
+        "id": "PRICE_CHANGE01"
+      },
+      "PRICE_CHANGE02": {
+        "summary": "s1e",
+        "id": "PRICE_CHANGE02"
+      }
+    }
+  },
+  "new": {
+    "price_change": {
+      "price_change_ref01": {
+        "summary": "s28"
+      }
+    }
+  },
+  "requests": {
+    "GET /price-changes": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

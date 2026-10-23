@@ -1,0 +1,28 @@
+# BasicCostFlow
+
+main: kit: flow: BasicCostFlow:
+{
+  entity: "cost",
+  kind: "basic",
+  name: "BasicCostFlow",
+  step: [
+    {
+      i: {
+        ref: "cost_ref01",
+        srcdatavar: "cost_ref01_data",
+        suffix: "_dt0"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-cost_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicCostFlow"
+}

@@ -1,0 +1,72 @@
+<?php
+declare(strict_types=1);
+
+// BestprintondemandData SDK utility registration
+
+require_once __DIR__ . '/../core/UtilityType.php';
+require_once __DIR__ . '/Clean.php';
+require_once __DIR__ . '/Done.php';
+require_once __DIR__ . '/MakeError.php';
+require_once __DIR__ . '/FeatureAdd.php';
+require_once __DIR__ . '/FeatureHook.php';
+require_once __DIR__ . '/FeatureInit.php';
+require_once __DIR__ . '/Fetcher.php';
+require_once __DIR__ . '/MakeFetchDef.php';
+require_once __DIR__ . '/MakeContext.php';
+require_once __DIR__ . '/MakeOptions.php';
+require_once __DIR__ . '/MakeRequest.php';
+require_once __DIR__ . '/MakeResponse.php';
+require_once __DIR__ . '/MakeResult.php';
+require_once __DIR__ . '/MakePoint.php';
+require_once __DIR__ . '/MakeSpec.php';
+require_once __DIR__ . '/MakeUrl.php';
+require_once __DIR__ . '/Param.php';
+require_once __DIR__ . '/PrepareAuth.php';
+require_once __DIR__ . '/PrepareBody.php';
+require_once __DIR__ . '/Graphql.php';
+require_once __DIR__ . '/PrepareHeaders.php';
+require_once __DIR__ . '/PrepareMethod.php';
+require_once __DIR__ . '/PrepareParams.php';
+require_once __DIR__ . '/PreparePath.php';
+require_once __DIR__ . '/PrepareQuery.php';
+require_once __DIR__ . '/ResultBasic.php';
+require_once __DIR__ . '/ResultBody.php';
+require_once __DIR__ . '/ResultHeaders.php';
+require_once __DIR__ . '/TransformRequest.php';
+require_once __DIR__ . '/TransformResponse.php';
+
+BestprintondemandDataUtility::setRegistrar(function (BestprintondemandDataUtility $u): void {
+    $u->clean = [BestprintondemandDataClean::class, 'call'];
+    $u->clean_add = [BestprintondemandDataClean::class, 'add'];
+    $u->clean_explain = [BestprintondemandDataDone::class, 'clean_explain'];
+    $u->done = [BestprintondemandDataDone::class, 'call'];
+    $u->make_error = [BestprintondemandDataMakeError::class, 'call'];
+    $u->feature_add = [BestprintondemandDataFeatureAdd::class, 'call'];
+    $u->feature_hook = [BestprintondemandDataFeatureHook::class, 'call'];
+    $u->feature_init = [BestprintondemandDataFeatureInit::class, 'call'];
+    $u->fetcher = [BestprintondemandDataFetcher::class, 'call'];
+    $u->make_fetch_def = [BestprintondemandDataMakeFetchDef::class, 'call'];
+    $u->make_context = [BestprintondemandDataMakeContext::class, 'call'];
+    $u->make_options = [BestprintondemandDataMakeOptions::class, 'call'];
+    $u->make_request = [BestprintondemandDataMakeRequest::class, 'call'];
+    $u->make_response = [BestprintondemandDataMakeResponse::class, 'call'];
+    $u->make_result = [BestprintondemandDataMakeResult::class, 'call'];
+    $u->make_point = [BestprintondemandDataMakePoint::class, 'call'];
+    $u->make_spec = [BestprintondemandDataMakeSpec::class, 'call'];
+    $u->make_url = [BestprintondemandDataMakeUrl::class, 'call'];
+    $u->param = [BestprintondemandDataParam::class, 'call'];
+    $u->prepare_auth = [BestprintondemandDataPrepareAuth::class, 'call'];
+    $u->prepare_body = [BestprintondemandDataPrepareBody::class, 'call'];
+    $u->prepare_headers = [BestprintondemandDataPrepareHeaders::class, 'call'];
+    $u->prepare_method = [BestprintondemandDataPrepareMethod::class, 'call'];
+    $u->prepare_params = [BestprintondemandDataPrepareParams::class, 'call'];
+    $u->prepare_path = [BestprintondemandDataPreparePath::class, 'call'];
+    $u->prepare_query = [BestprintondemandDataPrepareQuery::class, 'call'];
+    $u->graphql_body = [BestprintondemandDataGraphql::class, 'body'];
+    $u->graphql_errors = [BestprintondemandDataGraphql::class, 'errors'];
+    $u->result_basic = [BestprintondemandDataResultBasic::class, 'call'];
+    $u->result_body = [BestprintondemandDataResultBody::class, 'call'];
+    $u->result_headers = [BestprintondemandDataResultHeaders::class, 'call'];
+    $u->transform_request = [BestprintondemandDataTransformRequest::class, 'call'];
+    $u->transform_response = [BestprintondemandDataTransformResponse::class, 'call'];
+});

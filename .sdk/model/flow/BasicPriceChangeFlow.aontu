@@ -1,0 +1,28 @@
+# BasicPriceChangeFlow
+
+main: kit: flow: BasicPriceChangeFlow:
+{
+  entity: "price_change",
+  kind: "basic",
+  name: "BasicPriceChangeFlow",
+  step: [
+    {
+      i: {
+        ref: "price_change_ref01",
+        srcdatavar: "price_change_ref01_data",
+        suffix: "_dt0"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-price_change_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicPriceChangeFlow"
+}

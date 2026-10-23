@@ -1,0 +1,18 @@
+{
+  "files": [
+    "SUMMARY.md"
+  ],
+  "config": ".sdk/doc/qa/vale.ini",
+  "routes": {},
+  "quoted": {
+    "SUMMARY.md": [
+      "Compare two print-on-demand suppliers: the answer as data, with `summary` holding it as text",
+      "Find print-on-demand products: the answer as data, with `summary` holding it as text",
+      "Get a product&#39;s costs by supplier: the answer as data, with `summary` holding it as text.",
+      "Get print-on-demand price changes: the answer as data, with `summary` holding it as text",
+      "Production",
+      "The same answer as plain text, ready to quote, with the figures, the page each comes from and the basis they are stated on.",
+      "What it costs to print and ship print-on-demand products in the US at each supplier (Printful, Printify, Gelato and more): base price, first-item shipping and total, each with its source and date, the cheapest supplier like for like, profit at a sell price after a sales channel&#39;s fees, head-to-head supplier records, and the price changes hourly readings of Printful, Printify and Gelato attribute to each supplier. The same answers as the pages of BestPrintOnDemand and its MCP server. No key or account; read-only; open to any origin (CORS). The data is licensed CC BY 4.0: credit BestPrintOnDemand and link the page or source a figure came from."
+    ]
+  }
+}
